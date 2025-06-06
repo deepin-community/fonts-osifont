@@ -1,5 +1,66 @@
-template-repository (1.0-1) unstable; urgency=medium
+fonts-osifont (0.1.20230322+ds-4) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Revert destructive changes upstream removing language support.
+    Re-add characters the upstream removed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 31 Dec 2024 19:59:08 +0100
+
+fonts-osifont (0.1.20230322+ds-3) unstable; urgency=medium
+
+  * Bump standards version to 4.7.0.
+
+ -- Alex Myczko <tar@debian.org>  Tue, 23 Jul 2024 16:13:44 +0000
+
+fonts-osifont (0.1.20230322+ds-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Gürkan Myczko <tar@debian.org>  Mon, 12 Jun 2023 10:00:56 +0200
+
+fonts-osifont (0.1.20230322+ds-1) experimental; urgency=medium
+
+  * New upstream version.
+  * d/copyright:
+    - add Files-Excluded.
+    - bump years.
+  * d/rules: also build italic version.
+  * d/docs: add README.md.
+  * d/clean: updated.
+  * d/install: updated.
+  * Bump standards version to 4.6.2.
+
+ -- Gürkan Myczko <tar@debian.org>  Sat, 25 Mar 2023 14:05:29 +0100
+
+fonts-osifont (0.1.20220224-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/copyright: bump years.
+
+ -- Gürkan Myczko <tar@debian.org>  Fri, 25 Feb 2022 15:49:25 +0100
+
+fonts-osifont (0.1.20211207-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bump standards version to 4.6.0.
+  * Bump debhelper version to 13, drop d/compat.
+  * d/copyright:
+    - update copyright years.
+    - added Upstream-Contact.
+    - added the alternative license options.
+  * Update maintainer address.
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 07 Dec 2021 12:49:43 +0100
+
+fonts-osifont (0+git20190626-2) unstable; urgency=medium
+
+  * Team upload.
+  * No-change source-only upload to allow testing migration.
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 01 Dec 2019 19:44:50 -0500
+
+fonts-osifont (0+git20190626-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #902343)
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Wed, 26 Jun 2019 11:38:04 +0200
