@@ -1,0 +1,263 @@
+From: Andrej Shadura <andrewsh@debian.org>
+Date: Tue, 31 Dec 2024 19:46:43 +0100
+Subject: Revert destructive changes upstream removing language support
+
+This reverts upstream commits 4325437 and 1f3f127.
+
+Origin: vendor
+Forwarded: not-needed, https://github.com/hikikomori82/osifont/issues/7#issuecomment-2566482206
+---
+ README.md          |  6 +---
+ osifont-italic.sfd | 92 +++++-------------------------------------------------
+ osifont.sfd        | 59 +++++++++++++++++-----------------
+ 3 files changed, 39 insertions(+), 118 deletions(-)
+
+diff --git a/README.md b/README.md
+index 63420d9..52804c1 100644
+--- a/README.md
++++ b/README.md
+@@ -41,7 +41,7 @@ Disclaimer: Only contributors with at least 10% of glyphs contributed can discus
+ 
+ ### Supported languages (39)
+ 
+-Afrikaans, Albanian, Azerbaijani, Bulgarian, Catalan, Croation, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Hungarian, Icelandic, Irish (including Old Irish), Italian, Kazakh, Latvian, Lithuanian, Luxembourgish, Macedonian, Maltese, Māori, Moldovian, Montenegrin (latin, cyrillic), Norwegian, Polish, Portuguese, Romanian, Serbian, Slovak, Slovene, Spanish, Swedish, Turkish, Ukrainian, Vietnamese.
++Afrikaans, Albanian, Azerbaijani, Belarusian, Bulgarian, Catalan, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Hungarian, Icelandic, Irish (including Old Irish), Italian, Kazakh, Latvian, Lithuanian, Luxembourgish, Macedonian, Maltese, Māori, Moldovian, Montenegrin (Latin, Cyrillic), Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovene, Spanish, Swedish, Turkish, Ukrainian, Vietnamese.
+ 
+ ### Languages supported only by romanization (4)
+ 
+@@ -51,10 +51,6 @@ Armenian, Chinese (Hanyu Pinyin), Japanese (Hepburn), Georgian
+ 
+ Greek (few diacritics are missing but small and capital letters are ok)
+ 
+-### Languages with no support
+-
+-Belarusian, Russian
+-
+ ### Participate
+ 
+ If you want to join the project, send me email to hikikomori82 at gmail dot com. I am currently very busy with other projects to create new characters myself but if you create new characters I will add them.
+diff --git a/osifont-italic.sfd b/osifont-italic.sfd
+index 259bb03..a423a2a 100644
+--- a/osifont-italic.sfd
++++ b/osifont-italic.sfd
+@@ -9791,47 +9791,12 @@ EndChar
+ 
+ StartChar: uni0401
+ Encoding: 1025 1025 408
+-Width: 946
++Width: 927
+ GlyphClass: 2
+ Flags: W
+ LayerCount: 2
+ Fore
+-SplineSet
+-499 1511 m 1,0,-1
+- 1203 1528 l 1,1,-1
+- 842 0 l 1,2,-1
+- 150 0 l 1,3,-1
+- 499 1511 l 1,0,-1
+-1045 1745 m 128,-1,5
+- 1070 1853 1070 1853 1135 1853 c 0,6,7
+- 1211 1853 1211 1853 1185 1739 c 0,8,9
+- 1161 1637 1161 1637 1090 1637 c 0,10,4
+- 1020 1637 1020 1637 1045 1745 c 128,-1,5
+-620.5 1744 m 128,-1,12
+- 645 1851 645 1851 711 1851 c 0,13,14
+- 787 1851 787 1851 761 1737 c 0,15,16
+- 738 1637 738 1637 667 1637 c 0,17,11
+- 596 1637 596 1637 620.5 1744 c 128,-1,12
+-316 149 m 1,18,-1
+- 811 149 l 2,19,20
+- 880 149 880 149 864 77 c 256,21,22
+- 847 5 847 5 781 5 c 2,23,-1
+- 210 5 l 2,24,25
+- 149 5 149 5 166 80 c 2,26,-1
+- 479 1437 l 2,27,28
+- 497 1515 497 1515 580 1515 c 2,29,-1
+- 1122 1515 l 2,30,31
+- 1197 1515 1197 1515 1181 1442 c 0,32,33
+- 1164 1370 1164 1370 1089 1370 c 2,34,-1
+- 598 1370 l 1,35,-1
+- 490 904 l 1,36,-1
+- 849 904 l 2,37,38
+- 917 904 917 904 900 832 c 0,39,40
+- 884 764 884 764 819 764 c 2,41,-1
+- 458 764 l 1,42,-1
+- 316 149 l 1,18,-1
+-EndSplineSet
+-Validated: 37
++Refer: 132 203 N 1 0 0 1 0 0 2
+ EndChar
+ 
+ StartChar: afii10051
+@@ -11110,13 +11075,10 @@ Flags: W
+ LayerCount: 2
+ Fore
+ SplineSet
+-415 1511 m 1,0,-1
+- 1116 1511 l 1,1,-1
+- 767 0 l 1,2,-1
+- 66 0 l 1,3,-1
+- 415 1511 l 1,0,-1
++66 0 m 1
++ 415 1511 l 1025
+ EndSplineSet
+-Validated: 1
++Refer: 411 1028 N -1 0 0 -1 1254.35 1518 2
+ EndChar
+ 
+ StartChar: uni042E
+@@ -12328,52 +12290,12 @@ EndChar
+ 
+ StartChar: uni0451
+ Encoding: 1105 1105 488
+-Width: 805
++Width: 891
+ GlyphClass: 2
+ Flags: W
+ LayerCount: 2
+ Fore
+-SplineSet
+-397 1396 m 1,0,-1
+- 1048 1396 l 1,1,-1
+- 726 0 l 1,2,-1
+- 74 0 l 1,3,-1
+- 397 1396 l 1,0,-1
+-827 1270.5 m 128,-1,5
+- 852 1379 852 1379 914 1379 c 0,6,7
+- 987 1379 987 1379 961 1264 c 0,8,9
+- 937 1162 937 1162 869 1162 c 0,10,4
+- 802 1162 802 1162 827 1270.5 c 128,-1,5
+-431.5 1269 m 128,-1,12
+- 456 1376 456 1376 519 1376 c 0,13,14
+- 592 1376 592 1376 566 1262 c 0,15,16
+- 543 1162 543 1162 474 1162 c 0,17,11
+- 407 1162 407 1162 431.5 1269 c 128,-1,12
+-336 577 m 1,18,-1
+- 734 577 l 1,19,20
+- 767 720 767 720 738 782 c 0,21,22
+- 702 861 702 861 605 861 c 0,23,24
+- 513 861 513 861 426 780 c 0,25,26
+- 371 729 371 729 336 577 c 1,18,-1
+-222 663 m 2,27,28
+- 257 813 257 813 398 918 c 0,29,30
+- 518 1009 518 1009 637 1009 c 0,31,32
+- 779 1009 779 1009 850 890 c 0,33,34
+- 910 792 910 792 886 686 c 2,35,-1
+- 844 504 l 2,36,37
+- 828 435 828 435 769 435 c 2,38,-1
+- 301 435 l 1,39,-1
+- 273 314 l 2,40,41
+- 234 146 234 146 371 146 c 2,42,-1
+- 687 146 l 2,43,44
+- 764 146 764 146 747 72 c 0,45,46
+- 730 0 730 0 653 0 c 2,47,-1
+- 334 0 l 2,48,49
+- 228 0 228 0 168 92 c 0,50,51
+- 111 179 111 179 138 300 c 2,52,-1
+- 222 663 l 2,27,28
+-EndSplineSet
+-Validated: 37
++Refer: 164 235 N 1 0 0 1 0 0 2
+ EndChar
+ 
+ StartChar: afii10099
+diff --git a/osifont.sfd b/osifont.sfd
+index 78150a8..6dafb97 100644
+--- a/osifont.sfd
++++ b/osifont.sfd
+@@ -13135,7 +13135,7 @@ StartChar: afii10094
+ Encoding: 1100 1100 546
+ Width: 986
+ VWidth: 0
+-Flags: WO
++Flags: W
+ HStem: 4 144<292 714.263> 524 143<294 710.89>
+ VStem: 151 141<148 524 667 1061.95> 758 143<190.5 477>
+ LayerCount: 2
+@@ -14199,21 +14199,13 @@ EndChar
+ 
+ StartChar: uni0401
+ Encoding: 1025 1025 591
+-Width: 1024
++Width: 1003
++VWidth: 0
+ GlyphClass: 2
+ Flags: MW
+ LayerCount: 2
+ Fore
+-SplineSet
+-165 1511 m 5
+- 918 1528 l 1
+- 909 0 l 1
+- 165 0 l 1
+- 165 1511 l 5
+-EndSplineSet
+-Refer: 54 776 N 1 0 0 1 138 195 2
+-Refer: 24 69 N 1 0 0 1 12 0 2
+-Validated: 98309
++Refer: 142 203 N 1 0 0 1 0 0 2
+ EndChar
+ 
+ StartChar: uni0411
+@@ -15120,11 +15112,30 @@ VStem: 679 147<235.005 759 900 1277.22>
+ LayerCount: 2
+ Fore
+ SplineSet
+-73 1511 m 5,0,-1
+- 826 1511 l 1,1,-1
+- 826 0 l 1,2,-1
+- 73 0 l 1,3,-1
+- 73 1511 l 5,0,-1
++171 1511 m 2,0,-1
++ 483 1511 l 2,1,2
++ 615 1511 615 1511 720 1402 c 0,3,4
++ 826 1292 826 1292 826 1154 c 2,5,-1
++ 826 339 l 2,6,7
++ 826 211 826 211 721.5 105.5 c 128,-1,8
++ 617 0 617 0 459 0 c 2,9,-1
++ 162 0 l 2,10,11
++ 78 0 78 0 78 76 c 0,12,13
++ 78 143 78 143 167 143 c 2,14,-1
++ 427 143 l 2,15,16
++ 547 143 547 143 618 214 c 1,17,18
++ 679 277 679 277 679 389 c 2,19,-1
++ 679 759 l 1,20,-1
++ 315 759 l 2,21,22
++ 233 759 233 759 233 834 c 0,23,24
++ 233 900 233 900 317 900 c 2,25,-1
++ 679 900 l 1,26,-1
++ 679 1178 l 2,27,28
++ 679 1244 679 1244 625 1288 c 0,29,30
++ 528 1367 528 1367 466 1367 c 2,31,-1
++ 171 1367 l 2,32,33
++ 79 1367 79 1367 79 1442 c 0,34,35
++ 79 1511 79 1511 171 1511 c 2,0,-1
+ EndSplineSet
+ Validated: 1
+ EndChar
+@@ -16314,21 +16325,13 @@ EndChar
+ 
+ StartChar: uni0451
+ Encoding: 1105 1105 651
+-Width: 915
++Width: 1015
++VWidth: 0
+ GlyphClass: 2
+ Flags: MW
+ LayerCount: 2
+ Fore
+-SplineSet
+-86 1396 m 5
+- 830 1396 l 5
+- 830 0 l 5
+- 86 0 l 5
+- 86 1396 l 5
+-EndSplineSet
+-Refer: 54 776 N 1 0 0 1 58 -274 2
+-Refer: 85 101 N 1 0 0 1 -50 0 2
+-Validated: 98309
++Refer: 108 235 N 1 0 0 1 0 0 2
+ EndChar
+ 
+ StartChar: uni0454
